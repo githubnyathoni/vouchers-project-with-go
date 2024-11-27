@@ -43,7 +43,7 @@ func TestCreateBrand(t *testing.T) {
 	router.POST("/v1/api/brand", handler.CreateBrand)
 	router.ServeHTTP(w, req)
 
-	assert.Equal(t, http.StatusAccepted, w.Code)
+	assert.Equal(t, http.StatusCreated, w.Code)
 
 	var response models.Response
 	err := json.Unmarshal(w.Body.Bytes(), &response)

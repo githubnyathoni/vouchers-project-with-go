@@ -56,7 +56,7 @@ func (h *Handler) CreateBrand(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusAccepted, models.Response{
+	c.JSON(http.StatusCreated, models.Response{
 		Code:   201,
 		Status: "Success",
 		Data: map[string]interface{}{
