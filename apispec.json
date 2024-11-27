@@ -44,7 +44,7 @@
                       "type": "object",
                       "properties": {
                         "id": {
-                          "type": "number"
+                          "type": "string"
                         },
                         "name": {
                           "type": "string"
@@ -71,7 +71,7 @@
                 "type": "object",
                 "properties": {
                   "brand_id": {
-                    "type": "number"
+                    "type": "string"
                   },
                   "name": {
                     "type": "string"
@@ -108,7 +108,7 @@
                       "type": "object",
                       "properties": {
                         "id": {
-                          "type": "number"
+                          "type": "string"
                         },
                         "name": {
                           "type": "string"
@@ -163,7 +163,7 @@
                       "type": "object",
                       "properties": {
                         "id": {
-                          "type": "number"
+                          "type": "string"
                         },
                         "name": {
                           "type": "string"
@@ -222,7 +222,7 @@
                         "type": "object",
                         "properties": {
                           "id": {
-                            "type": "number"
+                            "type": "string"
                           },
                           "name": {
                             "type": "string"
@@ -259,10 +259,10 @@
                 "type": "object",
                 "properties": {
                   "customer_id": {
-                    "type": "number"
+                    "type": "string"
                   },
                   "voucher_id": {
-                    "type": "number"
+                    "type": "string"
                   },
                   "quantity": {
                     "type": "number"
@@ -290,7 +290,7 @@
                       "type": "object",
                       "properties": {
                         "transaction_id": {
-                          "type": "number"
+                          "type": "string"
                         },
                         "transaction_date": {
                           "type": "string"
@@ -345,7 +345,7 @@
                       "type": "object",
                       "properties": {
                         "transaction_id": {
-                          "type": "number"
+                          "type": "string"
                         },
                         "transaction_date": {
                           "type": "string"
