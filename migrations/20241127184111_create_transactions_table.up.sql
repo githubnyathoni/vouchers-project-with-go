@@ -1,0 +1,11 @@
+CREATE TABLE transactions (
+	id UUID PRIMARY KEY,
+	voucher_id UUID NOT NULL,
+	total_points_used INTEGER NOT NULL,
+	quantity INTEGER NOT NULL,
+	status VARCHAR(255) NOT NULL,
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+	FOREIGN KEY (voucher_id) REFERENCES vouchers (id) ON DELETE CASCADE
+);
