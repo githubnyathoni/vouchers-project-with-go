@@ -39,7 +39,7 @@ func (s *service) CreateTransaction(voucherID uuid.UUID, quantity int) (*models.
 		VoucherID: voucherID,
 		TotalPointsUsed: voucher.CostInPoint * quantity,
 		Quantity: quantity,
-		Status: "success",
+		Status: "completed",
 	}
 
 	err = s.repo.CreateTransaction(transaction)
