@@ -32,7 +32,7 @@ func main() {
 
 		v1.POST("voucher", voucherHandler.CreateVoucher)
 		v1.GET("voucher", voucherHandler.GetVoucherByID)
-		v1.GET("voucher/brand", voucherHandler.GetAllByBrand)
+		v1.GET("voucher/brand", voucherHandler.GetAllVoucherByBrand)
 	}
 
 	r.Run(":3000")
