@@ -258,9 +258,6 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "customer_id": {
-                    "type": "string"
-                  },
                   "voucher_id": {
                     "type": "string"
                   },
