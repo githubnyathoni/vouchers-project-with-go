@@ -56,8 +56,8 @@ func (h *Handler) CreateBrand(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, models.Response{
-		Code:   0,
+	c.JSON(http.StatusAccepted, models.Response{
+		Code:   201,
 		Status: "Success",
 		Data: map[string]interface{}{
 			"id":   brand.ID.String(),

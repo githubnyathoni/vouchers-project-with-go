@@ -43,12 +43,12 @@ func TestCreateBrand(t *testing.T) {
 	router.POST("/v1/api/brand", handler.CreateBrand)
 	router.ServeHTTP(w, req)
 
-	assert.Equal(t, http.StatusOK, w.Code)
+	assert.Equal(t, http.StatusAccepted, w.Code)
 
 	var response models.Response
 	err := json.Unmarshal(w.Body.Bytes(), &response)
 	assert.NoError(t, err)
-	assert.Equal(t, 0, response.Code)
+	assert.Equal(t, 201, response.Code)
 	assert.Equal(t, "Success", response.Status)
 
 	data := response.Data.(map[string]interface{})
