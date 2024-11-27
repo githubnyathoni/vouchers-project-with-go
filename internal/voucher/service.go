@@ -9,7 +9,7 @@ import (
 type Service interface {
 	CreateVoucher(name string, costInPoint int, brandID uuid.UUID) (*models.Voucher, error)
 	GetVoucherByID(id string) (*models.Voucher, error)
-	GetAllByBrand(id string) ([]models.Voucher, error)
+	GetAllVoucherByBrand(id string) ([]models.Voucher, error)
 }
 
 type service struct {
@@ -36,6 +36,6 @@ func (s *service) GetVoucherByID(id string) (*models.Voucher, error) {
 	return s.repo.GetVoucherByID(id)
 }
 
-func (s *service) GetAllByBrand(brandID string) ([]models.Voucher, error) {
-	return s.repo.GetAllByBrand(brandID)
+func (s *service) GetAllVoucherByBrand(brandID string) ([]models.Voucher, error) {
+	return s.repo.GetAllVoucherByBrand(brandID)
 }

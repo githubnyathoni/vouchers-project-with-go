@@ -83,9 +83,9 @@ func (h *Handler) GetVoucherByID(c *gin.Context) {
 	})
 }
 
-func (h *Handler) GetAllByBrand(c *gin.Context) {
+func (h *Handler) GetAllVoucherByBrand(c *gin.Context) {
 	brandID := c.Query("id")
-	vouchers, err := h.service.GetAllByBrand(brandID)
+	vouchers, err := h.service.GetAllVoucherByBrand(brandID)
 
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, models.Response{

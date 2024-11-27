@@ -10,7 +10,7 @@ import (
 type Repository interface {
 	CreateVoucher(voucher *models.Voucher) error
 	GetVoucherByID(id string) (*models.Voucher, error)
-	GetAllByBrand(id string) ([]models.Voucher, error)
+	GetAllVoucherByBrand(id string) ([]models.Voucher, error)
 }
 
 type repository struct {
@@ -35,7 +35,7 @@ func (r *repository) GetVoucherByID(id string) (*models.Voucher, error) {
 	return &voucher, nil
 }
 
-func (r *repository) GetAllByBrand(brandID string) ([]models.Voucher, error) {
+func (r *repository) GetAllVoucherByBrand(brandID string) ([]models.Voucher, error) {
 	var vouchers []models.Voucher
 	if err := r.db.Where("brand_id = ?", brandID).Find(&vouchers).Error; err != nil {
 		return nil, err
